@@ -6,19 +6,19 @@
 
 The scripts contained in this mod allow you animate structures that you create following a pattern by feeding an animation core with some resources.
 
-* **Pattern:** The particular form and materials that the structure must have before the animation process can be started.
-* **Animation core:** The hearth of the golem, if placed at the rigth spot of the rigth pattern, and feed with the right resources, it will bring the structure to life!
+**Pattern:** The particular form and materials that the structure must have before the animation process can be started.
+**Animation core:** The hearth of the golem, if placed at the rigth spot of the rigth pattern, and feed with the right resources, it will bring the structure to life!
 
-For modders: Tutorial to create your own golems
-1. Make a new mini-mod and require this one as dependency
-2. Create a new .pattern file, it will contain an unique pattern including:
+**For modders:** Tutorial to create your own golems
+1) Make a new mini-mod and require this one as dependency
+2) Create a new .pattern file, it will contain an unique pattern including:
    * Name of the pattern
    * Blocks to be used
    * Layout of the blocks
    * Resources required to complete the animation
    * Result of the animation
 Code:
-```JSON
+```
 {
     "name" : "greckan", -- The name of the pattern
     "offset" : [2, 6], -- The position of the core (2 rigth, 6 up from the lowest leftmost point)
@@ -50,9 +50,9 @@ Code:
     }
 }
 ```
-3. Create a new "Animation core", an standard object that simply has the following lines added to it:
+3) Create a new "Animation core", an standard object that simply has the following lines added to it:
 Code:
-```JSON
+```
 {
   ...
   -- All standard common things of any object
@@ -66,4 +66,4 @@ Code:
   "patterns" : ["/scripts/golemancer/patterns/ThePatternYouCreated.pattern"]
 }
 ```
-4. **DONE!** Launch Starbound, build the pattern, add the Animation core and ENJOY!
+4) **DONE!** Launch Starbound, build the pattern, add the Animation core and ENJOY!
