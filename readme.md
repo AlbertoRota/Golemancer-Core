@@ -9,8 +9,10 @@ The scripts contained in this mod allow you animate structures that you create f
 **Pattern:** The particular form and materials that the structure must have before the animation process can be started.
 **Animation core:** The hearth of the golem, if placed at the rigth spot of the rigth pattern, and feed with the right resources, it will bring the structure to life!
 
-**For modders:** Tutorial to create your own golems
+**For modders:** Tutorial to create your own golems.
+
 1) Make a new mini-mod and require this one as dependency
+
 2) Create a new .pattern file, it will contain an unique pattern including:
    * Name of the pattern
    * Blocks to be used
