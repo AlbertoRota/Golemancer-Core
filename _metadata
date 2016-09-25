@@ -1,0 +1,12 @@
+{
+  "version" : "1.0.0",
+  "steamContentId" : "",
+  "link" : "",
+  "friendlyName" : "Golemancer - Core",
+  "requires" : [],
+  "description" : "Core scripts for golemancy implementation on Starbound",
+  "name" : "GolemancerCoreScripts",
+  "path" : ".",
+  "includes" : [],
+  "author" : "AlbertoRota"
+}
