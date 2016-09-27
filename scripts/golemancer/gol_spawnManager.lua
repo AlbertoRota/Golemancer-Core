@@ -4,4 +4,17 @@ function spawn(pattern)
   if pattern.npcSpawn then
     world.spawnNpc(spawnPosition, pattern.npcSpawn.species, pattern.npcSpawn.npcType, world.threatLevel())
   end
+  if pattern.monsterSpawn then
+    world.spawnMonster(pattern.monsterSpawn.type, spawnPosition)
+  end
+end
+
+function evolve(evolution)
+  status.setResource("health", 0)
+  if evolution.npcSpawn then
+    world.spawnNpc(self.position, evolution.npcSpawn.species, evolution.npcSpawn.npcType, world.threatLevel())
+  end
+  if evolution.monsterSpawn then
+    world.spawnMonster(evolution.monsterSpawn.type, vec2.add(self.position, {0, 3}))
+  end
 end
