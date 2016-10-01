@@ -4,7 +4,6 @@ require "/scripts/golemancer/gol_resourceManager.lua"
 require "/scripts/golemancer/gol_spawnManager.lua"
 function init()
   object.setInteractive(true)
-
   self.patterns = config.getParameter("patterns")
   self.matchedPattern = false
   self.position = object.position()

@@ -18,10 +18,14 @@ function checkPattern(pattern)
       local foundMaterial = world.material(tileToTest,'foreground')
       local expectedMaterial = pattern.blocksTable[expectedId]
       if foundMaterial ~= expectedMaterial then
+        sb.logInfo("Pattern '%s' not matched.", pattern.name)
+        sb.logInfo("At x=%s y=%s", x, y)
+        sb.logInfo("Expected: %s , Found : %s", expectedMaterial, foundMaterial)
         return false
       end
     end
   end
+  sb.logInfo("Pattern '%s' matched.", pattern.name)
   return true
 end
 
