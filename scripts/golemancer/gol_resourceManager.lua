@@ -96,7 +96,7 @@ end
 function allConsumed(pattern)
   local consumed = true
   for _, resource in pairs(pattern.requiredResources) do
-    consumed = consumed and self.consumedTable[resource.name] and self.consumedTable[resource.name] >= resource.ammount
+    consumed = consumed and self.consumedTable[resource.name] and self.consumedTable[resource.name] >= resource.amount
   end
   return consumed
 end
