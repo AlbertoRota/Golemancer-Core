@@ -5,6 +5,12 @@ function spawn(pattern)
 end
 
 function evolve(evolution)
+  local eType = entity.entityType()
+  if eType == "monster" then
+    monster.setDropPool()
+  elseif eType == "npc" then
+    npc.setDropPool()
+  end
   status.setResource("health", 0)
   spawnResult(evolution, self.position)
 end
