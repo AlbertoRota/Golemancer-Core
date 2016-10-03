@@ -1,12 +1,12 @@
 {
-  "version" : "1.0.0",
+  "version" : "1.1.1",
   "steamContentId" : "",
-  "link" : "",
+  "link" : "http://community.playstarbound.com/resources/golemancer-core.4203/",
   "friendlyName" : "Golemancer - Core",
   "requires" : [],
   "description" : "Core scripts for golemancy implementation on Starbound",
   "name" : "GolemancerCoreScripts",
   "path" : ".",
-  "includes" : [],
+  "includes" : ["FrackinUniverse"],
   "author" : "AlbertoRota"
 }
