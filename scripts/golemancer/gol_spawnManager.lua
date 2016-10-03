@@ -17,12 +17,12 @@ end
 
 function spawnResult(result, position)
   if result.npcSpawn then
-    world.spawnNpc(position, result.npcSpawn.species, result.npcSpawn.npcType, world.threatLevel())
+    world.spawnNpc(position, result.npcSpawn.species, result.npcSpawn.npcType, world.threatLevel(), nil, result.npcSpawn.parameters or {})
   end
   if result.monsterSpawn then
-    world.spawnMonster(result.monsterSpawn.type, vec2.add(position, {0, 3}))
+    world.spawnMonster(result.monsterSpawn.type, vec2.add(position, {0, 3}), result.monsterSpawn.parameters or {})
   end
   if result.itemSpawn then
-    world.spawnItem(result.itemSpawn.name, position)
+    world.spawnItem(result.itemSpawn.name, position, result.itemSpawn.count or 1, result.itemSpawn.parameters or {})
   end
 end
