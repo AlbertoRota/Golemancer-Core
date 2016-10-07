@@ -1,3 +1,5 @@
+require "/scripts/util.lua"
+
 function spawn(pattern)
   local initialPosition = vec2.add(self.position, {-pattern.offset[1], -pattern.offset[2]})
   local spawnPosition = vec2.add(initialPosition, {pattern.boundingBox[1]/2, pattern.boundingBox[2]/2})
@@ -24,5 +26,16 @@ function spawnResult(result, position)
   end
   if result.itemSpawn then
     world.spawnItem(result.itemSpawn.name, position, result.itemSpawn.count or 1, result.itemSpawn.parameters or {})
+  end
+  if result.vehicleSpawn then
+    local key = sb.makeUuid()
+    if result.vehicleSpawn.controllerName then
+      world.spawnItem(result.vehicleSpawn.controllerName, position, 1, {key = key, filled = false})
+    end
+
+    local vehicleParams = { ownerKey = key, fromItem = true }
+    util.mergeTable(vehicleParams, result.vehicleSpawn.parameters or {})
+    sb.logInfo("vehicleParams : %s",vehicleParams)
+    world.spawnVehicle(result.vehicleSpawn.name, position, vehicleParams)
   end
 end
